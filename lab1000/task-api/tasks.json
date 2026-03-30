@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "uuid": "9768f5ab-0f2d-41ea-8b6b-cec0dd2c8982",
+      "title": "Купить продукты",
+      "description": "",
+      "category": "shopping",
+      "priority": 2,
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2026-03-30T19:44:40.903Z",
+      "updatedAt": "2026-03-30T19:44:40.903Z"
+    }
+  ],
+  "categories": [
+    "work",
+    "personal",
+    "shopping",
+    "health"
+  ],
+  "lastId": 0
+}
