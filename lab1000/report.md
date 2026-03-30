@@ -1,4 +1,4 @@
-# **Отчет по лабораторной работе №1: API на FastAPI (Python) и API на Express (Node.js)
+# **Отчет по лабораторной работе №1: API на FastAPI (Python) и API на Express (Node.js)**
 
 ## Сведения о студенте  
 **Дата:** 2026-02-26  
