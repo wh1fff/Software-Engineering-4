@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Board</title>
+</head>
+<body>
+
+<h1>Comment Board</h1>
+
+<form action="/comment" method="POST">
+    <input type="text" name="username" placeholder="Name">
+    <textarea name="comment"></textarea>
+    <button type="submit">Send</button>
+</form>
+
+<h2>Comments</h2>
+
+<% comments.forEach(function(comment) { %>
+    <div>
+        <strong><%= comment.username %></strong>
+        <p><%= comment.comment %></p>
+    </div>
+<% }); %>
+
+<button onclick="loadComments()">Load via API</button>
+<div id="api-result"></div>
+
+<script nonce="<%= nonce %>">
+function loadComments() {
+    fetch('/api/comments')
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById('api-result');
+            container.innerHTML = '';
+
+            data.forEach(c => {
+                const div = document.createElement('div');
+                div.textContent = c.comment;
+                container.appendChild(div);
+            });
+        });
+}
+</script>
+
+</body>
+</html>
